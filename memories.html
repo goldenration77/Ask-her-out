@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff0f5" />
+    <meta name="description" content="A little collection of stories, special events, and favorite memories." />
+    <title>Our stories & memories</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="memories-page">
+    <canvas class="love-canvas" aria-hidden="true"></canvas>
+    <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Turn sound on">♫ Sound off</button>
+    <main class="container memories-container">
+      <p class="eyebrow">A little collection, from the heart</p>
+      <h1>Stories &amp; memories</h1>
+      <p class="byline">Save the moments, celebrations, and little stories that mean something to you.</p>
+
+      <section class="memory-editor" aria-labelledby="editor-title">
+        <h2 id="editor-title">Add a story or memory</h2>
+        <form id="memory-form">
+          <input id="memory-id" name="id" type="hidden" />
+          <div class="memory-form-grid">
+            <label>Type
+              <select id="memory-type" name="type">
+                <option value="story">Story</option>
+                <option value="event">Special event</option>
+                <option value="memory">Special memory</option>
+              </select>
+            </label>
+            <label>Title
+              <input id="memory-title" name="title" type="text" maxlength="80" placeholder="A day I'll always remember" required />
+            </label>
+            <label class="memory-date-field">Date <span class="optional">(optional)</span>
+              <input id="memory-date" name="date" type="date" />
+            </label>
+            <label class="memory-story-field">Your story
+              <textarea id="memory-story" name="story" rows="4" maxlength="1200" placeholder="What made this moment special?" required></textarea>
+            </label>
+          </div>
+          <div class="memory-form-actions">
+            <button class="button button-yes" id="memory-submit" type="submit">Save to our collection <span aria-hidden="true">♥</span></button>
+            <button class="button button-no" id="memory-cancel" type="button" hidden>Cancel edit</button>
+          </div>
+          <p class="memory-status" id="memory-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="memory-collection" aria-labelledby="collection-title">
+        <div class="collection-heading">
+          <h2 id="collection-title">Our collection</h2>
+          <button class="text-button" id="memory-reset" type="button">Restore starter entries</button>
+        </div>
+        <p class="hint memory-storage-note">Your edits are saved in this browser on this device.</p>
+        <div class="memory-list" id="memory-list" aria-live="polite"></div>
+      </section>
+
+      <nav class="memory-nav" aria-label="More pages">
+        <a class="back-link" href="index.html">← Back to the beginning</a>
+        <a class="button button-yes" href="question.html">Continue to the question <span aria-hidden="true">♥</span></a>
+      </nav>
+    </main>
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+    <script src="./memories.js"></script>
+  </body>
+</html>
