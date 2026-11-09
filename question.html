@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff0f5" />
+    <title>A question for you</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas class="love-canvas" aria-hidden="true"></canvas>
+    <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Turn sound on">♫ Sound off</button>
+    <main class="container">
+      <div class="hero-art" aria-hidden="true"><span class="hero-heart">♥</span><span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">♡</span></div>
+      <p class="eyebrow">So, here's my question</p>
+      <h1><span data-name="recipient">[Recipient Name]</span>, would you like to go on a date with me?</h1>
+      <p class="byline">I'd be really happy to spend that time together. Whatever your answer, thank you for hearing me out.</p>
+      <div class="btn">
+        <a class="button button-yes" href="yes.html">Yes, I'd love to <span aria-hidden="true">♥</span></a>
+        <a class="button button-no" href="no-thanks.html">No, thank you</a>
+      </div>
+      <p class="hint">A note from <span data-name="sender">[Your Name]</span> · Step 3 of 3</p>
+      <a class="back-link" href="story2.html">← Back to the note</a>
+    </main>
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
