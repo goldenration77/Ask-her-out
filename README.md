@@ -1,4 +1,4 @@
-# Ask-her-out
+# Ask-out
 
 ## Personalize the names
 
